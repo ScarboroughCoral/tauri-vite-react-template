@@ -1,0 +1,7 @@
+message Greet {
+  required string name = 1;
+}
+
+message GreetCallback {
+  required string message = 1;
+}

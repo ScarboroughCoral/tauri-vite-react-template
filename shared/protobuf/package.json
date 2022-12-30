@@ -1,0 +1,19 @@
+{
+  "name": "@scarboroughcoral/tauri-app",
+  "version": "1.0.0",
+  "description": "client <--> web 通信协议",
+  "main": "dist/proto.js",
+  "repository": "https://github.com/ScarboroughCoral/tauri-vite-react-template.git",
+  "author": "corallee9797@gmail.com",
+  "license": "MIT",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+  },
+  "dependencies": {
+    "protobufjs": "~6.11.3",
+    "semver": "^7.1.2"
+  }
+}
