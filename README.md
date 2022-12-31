@@ -13,3 +13,11 @@ yarn
 # 需要等待 cargo fetch & check 结束
 yarn tauri dev
 ```
+
+# Features
+- [x] Vite
+- [x] React
+- [x] Typescript
+- [x] Web Debugging
+- [x] Rust Debugging
+- [ ] Communicate Between Web And Rust using `Protocol Buffer`
