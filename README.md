@@ -10,7 +10,7 @@ This template should help get you started developing with Tauri, React and Types
 
 ```bash
 yarn
-# 需要等待 cargo fetch & check 结束
+# after cargo fetch & check done
 yarn tauri dev
 ```
 
@@ -23,3 +23,10 @@ yarn tauri dev
 - [ ] Communicate Between Web And Rust using `Protocol Buffers`
   - [x] Rust with [quick-protobuf](https://github.com/tafia/quick-protobuf)
   - [ ] Typescript with [protobufjs](https://github.com/protobufjs/protobuf.js)
+  - [ ] Single Communicate Channel
+  - [ ] Easy Build
+- [ ] Code Style
+  - [ ] Eslint & Prettier for Web
+  - [ ] Clippy for Rust
+- [ ] Generic Installer
+- [ ] Generic Github Build Workflow
