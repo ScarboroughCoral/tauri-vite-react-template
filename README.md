@@ -6,7 +6,7 @@ This template should help get you started developing with Tauri, React and Types
 
 - [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
 
-# Quick Start
+## Quick Start
 
 ```bash
 yarn
@@ -14,10 +14,12 @@ yarn
 yarn tauri dev
 ```
 
-# Features
+## Features
 - [x] Vite
 - [x] React
 - [x] Typescript
 - [x] Web Debugging
 - [x] Rust Debugging
-- [ ] Communicate Between Web And Rust using `Protocol Buffer`
+- [ ] Communicate Between Web And Rust using `Protocol Buffers`
+  - [x] Rust with [quick-protobuf](https://github.com/tafia/quick-protobuf)
+  - [ ] Typescript with [protobufjs](https://github.com/protobufjs/protobuf.js)
