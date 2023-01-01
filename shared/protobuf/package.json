@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "client <--> web 通信协议",
   "main": "dist/proto.js",
+  "typings": "dist/proto.d.ts",
   "repository": "https://github.com/ScarboroughCoral/tauri-vite-react-template.git",
   "author": "corallee9797@gmail.com",
   "license": "MIT",
@@ -11,9 +12,13 @@
     "dist"
   ],
   "scripts": {
+    "pb:static-code": "rm -rf dist && mkdir dist && pbjs -r tauriApp -t static-module -w commonjs --force-long -o dist/proto.js proto/*.proto",
+    "pb:generate": "pbts -o dist/proto.d.ts dist/proto.js",
+    "prepb:generate": "npm run pb:static-code",
+    "postpb:generate": "pbjs -r tauriApp -t json-module -w commonjs -o dist/proto.js proto/*.proto",
+    "build": "npm run pb:generate"
   },
   "dependencies": {
-    "protobufjs": "~6.11.3",
-    "semver": "^7.1.2"
+    "protobufjs": "~6.11.3"
   }
 }

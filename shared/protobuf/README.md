@@ -3,5 +3,6 @@
 ## Generate Code
 
 ```bash
-cargo build # rust protocol buffers
+cargo build # rust protocol buffers code
+npm run build # Typescript protocol buffers code
 ```
