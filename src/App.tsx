@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
+import { Greet, GreetCallback } from 'protobuf'
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
@@ -10,6 +11,16 @@ function App() {
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke("greet", { name }));
+  }
+
+
+  async function greetProtobuf() {
+    // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
+    // 这里不能传递Uint8Array（Web can not pass Uint8Array to Rust Command（invalid type: map, expected a sequence）） https://github.com/tauri-apps/tauri/issues/3306
+    const greetBinary:number[] = await invoke("greet_protobuf", { greet: Array.from(Greet.encode(Greet.create({name})).finish()), b: 1 })
+   
+    // FIXME quick-protobuf 会将长度序列化到二进制序列开头 https://github.com/tafia/quick-protobuf/issues/202
+    setGreetMsg(GreetCallback.decode(Uint8Array.from(greetBinary.slice(1))).message);
   }
 
   return (
@@ -40,9 +51,13 @@ function App() {
           <button type="button" onClick={() => greet()}>
             Greet
           </button>
+          <button type="button" onClick={() => greetProtobuf()}>
+            Greet Proto
+          </button>
         </div>
       </div>
       <p>{greetMsg}</p>
+      
     </div>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@scarboroughcoral/tauri-app",
+  "name": "protobuf",
   "version": "1.0.0",
   "description": "client <--> web 通信协议",
   "main": "dist/proto.js",

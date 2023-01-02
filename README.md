@@ -1,6 +1,6 @@
-# Tauri + React + Typescript
+# Tauri + React + Typescript + Protocol Buffers
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+This template should help get you started developing with Tauri, React and Typescript in Vite, communicating and synchronizing code using Protocol Buffers.
 
 ## Recommended IDE Setup
 
